@@ -22,10 +22,8 @@ import java.io.ByteArrayOutputStream;
 
 @Controller
 public class LoginController {
-    /**
-     * 日志工具
-     */
     private org.slf4j.Logger logger = LoggerFactory.getLogger(LoginController.class);
+
     @Resource
     private DefaultKaptcha defaultKaptcha;
     /**
@@ -61,8 +59,6 @@ public class LoginController {
 
     /**
      * 验证码获取链接
-     *
-     * @throws Exception
      */
     @RequestMapping("/login/verifyCode")
     public void verifyCode() throws Exception {
